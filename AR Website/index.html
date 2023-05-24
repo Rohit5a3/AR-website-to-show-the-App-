@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>App Developement</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <style>
+    
+    .fade-in {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1s ease-in-out;
+    }
+.fade-in.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slideshow-container .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.dot-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+.model {
+      margin-bottom: 40px;
+    }
+
+    .model h3 {
+      margin-top: 0;
+    }
+
+    .model p {
+      margin-bottom: 0;
+    }
+
+  </style>
+</head>
+<body id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container px-4">
+      <a class="navbar-brand" href="#page-top">Augmented Reality</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header-->
+  <header class="bg-primary bg-gradient text-white">
+    <div class="container px-4 text-center">
+      <h1 class="fw-bolder">AUGMENTED REALITY IN EDUCATION</h1>
+      <p class="lead">An AR App that is used to make learning and understanding easier for students by visualizing the models implemented using unity</p>
+      <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
+    </div>
+  </header>
+  <!-- About section-->
+  <section id="about" >s
+    <div class="container px-4">
+      <div class="row gx-4 justify-content-center">
+        <div class="col-lg-8">
+          <h2>About AR in Education</h2>
+          <p class="lead">Augmented Reality (AR) in education is revolutionizing the way students learn and engage with subjects. By blending digital content with the real world, AR provides an immersive and interactive learning experience. Here are some key benefits of AR in education:</p>
+          <ul class="lead">
+            <li>Enhances understanding of complex concepts through visualizations.</li>
+            <li>Increases student engagement and motivation.</li>
+            <li>Facilitates hands-on learning experiences.</li>
+            <li>Promotes collaboration and interaction among students.</li>
+            <li>Enables personalized and adaptive learning.</li>
+          </ul>
+          <p class="lead">Experience the power of AR in education with our Unity-based app!</p>
+          <a class="btn btn-lg btn-light" href="your-app-url">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Models section-->
+  <section class="bg-light" id="models">
+    <div class="container px-4">
+      <div class="row gx-4 justify-content-center">
+        <div class="col-lg-8">
+          <h2>Models</h2>
+          <div class="slideshow-container">
+            <div class="slide fade-in active">
+              <img src="/Users/rohitshetty/Desktop/Augmented-Reality-Technology-Trends.webp" alt="Slide Image 1" height="600" width="600" />
+            </div>
+            <div class="slide fade-in">
+              <img src="/Users/rohitshetty/Desktop/d073f87913a54fddbb5e5416ac9d270f.jpeg" alt="Slide Image 2" height="600" width="600" />
+            </div>
+            <div class="slide fade-in">
+              <img src="/Users/rohitshetty/Desktop/demo.png" alt="Slide Image 3" height="600" width="600" />
+            </div>
+            <div class="slide fade-in">
+              <img src="/Users/rohitshetty/Desktop/AugmentedRealityforLearningChemistry.jpg" alt="Slide Image 4" height="600" width="600" />
+            </div>
+            <div class="slide fade-in">
+              <img src="/Users/rohitshetty/Desktop/maxresdefault.jpg" alt="Slide Image 5" height="600" width="600" />
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lead">
+    <div class="container px-4">
+      <div class="row gx-4 justify-content-center">
+        <div class="col-lg-8">
+          <div class="lead">
+           <h3>Unity</h3>
+            <p>
+              Unity is a powerful cross-platform game engine used for developing video games, simulations, and other interactive experiences. It provides a wide range of tools and features to create immersive and interactive 2D and 3D environments.
+            </p>
+          </div>
+          <div class="model">
+            <h3>Animal Cell</h3>
+            <p>
+              The animal cell is a basic structural and functional unit of animal organisms. It consists of various organelles such as the nucleus, mitochondria, endoplasmic reticulum, and Golgi apparatus. These organelles work together to carry out essential cellular functions.
+            </p>
+          </div>
+          <div class="model">
+            <h3>Solar System</h3>
+            <p>
+              The solar system is a collection of planets, moons, asteroids, and comets that orbit around the Sun. It includes objects like Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. The study of the solar system helps us understand the dynamics and formation of celestial bodies.
+            </p>
+          </div>
+          <div class="model">
+            <h3>Hybridization</h3>
+            <p>
+              Hybridization is a concept in chemistry that involves the mixing of atomic orbitals to form hybrid orbitals. It plays a crucial role in understanding the molecular geometry and bonding in compounds. Hybridization helps explain the shapes and properties of molecules.
+            </p>
+          </div>
+          <div class="model">
+            <h3>Digestive System</h3>
+            <p>
+              The digestive system is responsible for the breakdown, absorption, and assimilation of food in the human body. It consists of organs such as the mouth, esophagus, stomach, small intestine, and large intestine. Each organ has a specific function in the digestion and absorption of nutrients.
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Unity app creation section-->
+  <section id="app-interface">
+    <div class="container px-4">
+      <div class="row gx-4 justify-content-center">
+        <div class="col-lg-8">
+          <h2>Unity App Creation</h2>
+          <ul class="lead">
+            <li>Create stunning AR applications with Unity's powerful development platform.</li>
+            <li>Implement interactive and immersive experiences using 3D models and animations.</li>
+            <li>Utilize Unity's scripting capabilities to add custom functionality and interactivity to your AR app.</li>
+            <li>Integrate real-time data and input from sensors for dynamic AR experiences.</li>
+          </ul>
+          <p class="lead">Ready to bring your AR ideas to life with Unity? Learn more about our app and get started!</p>
+          <a class="btn btn-lg btn-light" href="https://docs.unity3d.com/560/Documentation/Manual/GettingStarted.html">Learn More</a>
+        </div>
+      </div>
+    </div>
+     <div class="text-center mt-4">
+            <a class="btn btn-primary btn-lg" href="https://drive.google.com/file/d/1Eu5uKA1iNkoi_q_CShC4yNuGxh0hfKlb/view?usp=share_link" download>Download Project Report</a>
+          </div>
+  </section>
+  <!-- Contact section-->
+  <section class="bg-light" id="contact">
+    <div class="container px-4">
+      <div class="row gx-4 justify-content-center">
+        <div class="col-lg-8">
+          <h2>Contact Us</h2>
+          <p class="lead">Have questions or want to learn more about AR in education? Feel free to contact us.</p>
+          <form>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="name" type="text" placeholder="Enter your name..." />
+              <label for="name">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="email" type="email" placeholder="Enter your email..." />
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="message" placeholder="Enter your message..." style="height: 10rem"></textarea>
+              <label for="message">Message</label>
+            </div>
+            <div class="d-grid"><button class="btn btn-primary btn-lg" type="submit">Submit</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="py-4 bg-dark">
+    <div class="container px-4">
+      <p class="m-0 text-center text-white">&copy; 2023 Your Website. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom scripts for this template-->
+  <script src="js/scripts.js"></script>
+  <script>
+    // Slideshow functionality
+    let slideIndex = 1;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  showSlide((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlide((slideIndex = n));
+}
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  slides[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].classList.add("active");
+}
+  </script>
+  <script>
+    // Fade-in transition
+    $(window).on("load", function () {
+      $(".fade-in").each(function () {
+        const waypoint = new Waypoint({
+          element: this,
+          handler: function () {
+            $(this.element).addClass("active");
+          },
+          offset: "75%",
+        });
+      });
+    });
+  </script>
+</body>
+</html>
